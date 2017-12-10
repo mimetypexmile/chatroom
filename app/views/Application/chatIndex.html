@@ -1,0 +1,15 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<h1>Play ChatRoom</h1>
+#{doLayout /}
+<h3>欢迎您: ${entryName}! 您的身份是: ${identity}</h3>
+
+<form action="@{Application.speak}" method="get">
+    <input type="hidden" name="currentUser" value="${entryName}">
+    <input type="text" name="content">
+    <input type="submit" value="发言">
+</form>
+
+<a href="@{Application.index()}"> 退出</a>
+

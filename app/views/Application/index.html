@@ -1,0 +1,7 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<form action="@{Application.chatIndex()}" method="get">
+    <input type="text" name="entryName">
+    <input type="submit" value="进入聊天室">
+</form>
